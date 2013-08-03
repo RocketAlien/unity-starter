@@ -1,1 +1,1 @@
-Clean Unity project.
+Unity Starter Project
