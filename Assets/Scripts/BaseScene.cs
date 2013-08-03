@@ -33,10 +33,11 @@ public class BaseScene : MonoBehaviour {
             //TODO: handle back button on Windows Phone devices
             if (Input.GetKeyDown(KeyCode.Escape)) {
                 if (Application.loadedLevelName == StartSceneName) {
-                    //exit game only if in start scene
+                    //exit game when in start scene
                     isRunning = false;
                 }
                 else {
+                    //load start scene when in other scenes
                     LoadStartScene();
                 }
             }
