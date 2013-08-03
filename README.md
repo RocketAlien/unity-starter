@@ -1,1 +1,1 @@
-Unity Starter Project
+Unity starter project
