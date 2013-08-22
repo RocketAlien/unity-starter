@@ -35,4 +35,14 @@ public class Util {
     public static string GetTempFilePath(string fileName) {
         return Path.Combine(Application.temporaryCachePath, fileName);
     }
+
+    public static int GetRandomInt(int min, int max) {
+        return UnityEngine.Random.Range(min, max);
+    }
+
+    public void Swap<T>(ref T one, ref T two) {
+        T t = one;
+        one = two;
+        two = t;
+    }
 }

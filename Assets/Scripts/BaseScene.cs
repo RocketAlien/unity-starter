@@ -13,19 +13,18 @@ public class BaseScene : MonoBehaviour {
 #if UNITY_ANDROID
     private const float ExitDelay = 0.25f;
     private bool isRunning = true;
-    private float elapsedTime = 0.0f;
 #endif
 	
-    //subclasses should call base.Awake()
+    //subclasses should call base.Awake() if overloading this methid
     protected void Awake() {
     }
 	
-    //subclasses should call base.Start()
+    //subclasses should call base.Start() if overloading this methid
     protected void Start() {
         DisableScreenSaver();
     }
 	
-    //subclasses should call base.Update()
+    //subclasses should call base.Update() if overloading this methid
     protected void Update() {
 #if UNITY_ANDROID
         if (isRunning) {
@@ -44,10 +43,7 @@ public class BaseScene : MonoBehaviour {
         }
         else {
             //show several frames before exit to avoid animation stutter
-            elapsedTime += Time.deltaTime;
-            if (elapsedTime >= ExitDelay) {
-                Application.Quit();
-            }
+            Invoke("Exit", ExitDelay);
         }
 #endif
     }

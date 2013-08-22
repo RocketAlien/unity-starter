@@ -2,12 +2,11 @@ using UnityEngine;
 using System.Collections;
 
 public class LogoScene : BaseScene {
-	
-    new void Awake() {
-        base.Awake();
-    }
+
+    public float Delay = 3.0f;
 
     new void Start() {
         base.Start();
+        Invoke("LoadNextScene", Delay);
     }
 }
