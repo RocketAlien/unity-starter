@@ -2,11 +2,11 @@ using UnityEngine;
 using System.Collections;
 
 //base scene class for all game scenes to inherit from
-public class BaseScene : MonoBehaviour {
+public class BaseScene : BaseBehaviour {
 
     public string StartSceneName = "LogoScene";
     public string NextSceneName  = "MenuScene";
-    public bool ShowStartSceneOnResume = true;
+    public bool LoadStartSceneOnResume = true;
 
     private bool isLoading = false;
 
@@ -49,7 +49,7 @@ public class BaseScene : MonoBehaviour {
     }
 
     private void OnApplicationPause(bool paused) {
-        if (!paused && ShowStartSceneOnResume) {
+        if (!paused && LoadStartSceneOnResume) {
             //load start scene on resume
             LoadStartScene();
         }

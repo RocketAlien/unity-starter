@@ -6,6 +6,8 @@ using System.Text.RegularExpressions;
 
 public class Util {
 
+    public const int InvalidIndex = -1;
+
     //replace whitespace characters with underscores
     public static string TrimWhiteSpace(string text) {
         return Regex.Replace(text.Trim(), "\\s+", "_");
