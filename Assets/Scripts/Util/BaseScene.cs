@@ -6,7 +6,7 @@ public class BaseScene : BaseBehaviour {
 
     public string StartSceneName = "LogoScene";
     public string NextSceneName  = "MenuScene";
-    public bool LoadStartSceneOnResume = true;
+    public bool ShowStartSceneOnResume = true;
 
     private bool isLoading = false;
 
@@ -49,7 +49,7 @@ public class BaseScene : BaseBehaviour {
     }
 
     private void OnApplicationPause(bool paused) {
-        if (!paused && LoadStartSceneOnResume) {
+        if (!paused && ShowStartSceneOnResume) {
             //load start scene on resume
             LoadStartScene();
         }
