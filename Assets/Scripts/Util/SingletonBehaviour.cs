@@ -1,6 +1,6 @@
 using UnityEngine;
 
-//turn any subclass into a singleton behaviour
+//turn any base behaviour subclass into a singleton behaviour
 public class SingletonBehaviour<T> : BaseBehaviour where T : BaseBehaviour {
 
     public bool Persistent = false;
